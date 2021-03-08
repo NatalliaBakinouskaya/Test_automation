@@ -1,0 +1,19 @@
+{
+  "name": "training_session",
+  "version": "0.0.1",
+  "description": "Project for Training sessions for AIS",
+  "main": "index.js",
+  "scripts": {
+    "install": "sudo npm install --save",
+    "build": "tsc firstFile.ts",
+    "test": "node firstFile.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31"
+  }
+}
