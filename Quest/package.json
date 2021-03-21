@@ -1,0 +1,22 @@
+{
+  "name": "type_cl_int",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install --save",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "play": "node ./bin/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "i": "^0.3.6",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.34",
+    "ts-node": "^9.1.1"
+  }
+}
