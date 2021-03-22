@@ -1,5 +1,6 @@
 import { next, progress, won } from "./gameLogic/locations"
-import {winner, loser} from "./gameLogic/greatings"
+import { winner, loser } from "./gameLogic/greatings"
+
 while(progress == true){
     next.action3();
 }

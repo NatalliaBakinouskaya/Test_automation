@@ -5,7 +5,7 @@ var locations_1 = require("./locations");
 exports.winner = {
     greating: "! \u0412\u044B \u0432\u044B\u0438\u0433\u0440\u0430\u043B\u0438!",
     conversation: function () {
-        console.log('Игра окончена, ', locations_1.scene1.selection + this.greating);
+        console.log('Игра окончена, ', locations_1.userName + this.greating);
     },
 };
 exports.loser = {

@@ -1,8 +1,9 @@
 const Prompt: any = require('prompt-sync')();
 import { Scene} from "./classes"
+
 export let next : any;
 export let progress : boolean = true;
-export let userName : string = 'Женя';
+export let userName : string = '?';
 export let won : boolean = true;
 
 
@@ -32,7 +33,7 @@ export let scene1 = new Scene(
             progress = false;
         
        }
-    // return userName;
+  
     }
 export let scene2 = new Scene(
 `В одной деревне жила маленькая девочка, у которой была красная шапка 
@@ -49,8 +50,8 @@ ______________
 scene2.action2 = function(){
    if(this.selection == '2'){
        console.log(`Отличный выбор, Волк!`);
-       next = 'scene3';
-       progress = false;
+       next = scene3;
+       progress = true;
    }
    else if(this.selection == '1'){
        console.log(`С девчонками не играю! Пока!`);
@@ -68,8 +69,42 @@ scene2.action2 = function(){
    }
 
 }
-next = scene1;
-// userName = scene1.selection;
-// scene1.action3();
 
-// console.log(userName);
+
+export let scene3 = new Scene(
+    `В один прекрасный день Вы встечаете в лесу Красную Шапку.
+    Что Вы ей скажете?
+    ______________
+    1 - Bonjour!
+    или 
+    2 - Привет!
+    или 
+    3 - Стой! Буду стрелять! Ха-ха-ха! 
+    `);
+    
+    scene3.action2 = function(){
+       if(this.selection == '2' || this.selection == '1'){
+           console.log(`Именно! Вежливость - главное оружие волка.`);
+           next = 'scene4';
+           progress = false;
+       }
+       else if(this.selection == '3'){
+           console.log(`Скорее всего, Шапка начнет кричать "Спасите! Помогите! Волка зарубите!" 
+           На крики рибегут охотники и все - game over.`);
+           next = 'finish';
+           progress = false;
+           won = false;
+        
+       }
+       else {
+           console.log(`${scene1.selection}, это не ответ давай еще раз.`);
+           scene3.text = `\uD83D\uDE0D`;
+           scene3.action1();
+           scene3.action2()
+        
+       }
+    
+    }
+    
+next = scene1;
+
