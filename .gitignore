@@ -5,4 +5,6 @@
 /trainingSession_Classes_Interfaces
 /Quest/node_modules  
 /Quest/package-lock.json
-/Quest/bin 
+/Quest/bin
+/hover/node_modules
+/hover/package-lock.json 
